@@ -1,0 +1,205 @@
+:root {
+  line-height: 1.6;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  gap: 16px;
+  max-width: 1340px;
+  display: flex;
+  margin: 0 auto;
+  padding: 30px 80px;
+}
+
+section::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 524px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100svw;
+  background-color: #7d6f5d;
+}
+
+.notice-review {
+  overflow: hidden;
+  padding: 40px 70px;
+  background-color: #282725;
+  position: relative;
+  color: #fffcf9;
+  flex-basis: 60%;
+}
+
+.score-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 0.6;
+  font-size: 606px;
+  color: #b68c70;
+  opacity: 0.08;
+  transform: translateX(100px) translateY(30px);
+}
+
+.dash {
+  display: inline-block;
+  width: 40px;
+  border-bottom: 1px solid #7d6f5d;
+}
+
+.score {
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.review-star {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.review-score {
+  font-size: 19px;
+}
+
+.review-score b {
+  font-size: 22px;
+}
+
+.reviewer-name {
+  font-size: 13px;
+}
+
+.review-titile {
+  font-size: 24px;
+}
+
+.review {
+  font-size: 14px;
+}
+
+.contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+button {
+  background: transparent;
+  border: transparent;
+  outline: transparent;
+}
+
+.notice-review button {
+  position: absolute;
+  padding: 0;
+  left: 16px;
+  bottom: 16px;
+}
+
+.cafe-news {
+  color: #7d6f5d;
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: #fffcf9;
+  padding: 24px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* 카페 뉴스 */
+
+.other-news {
+  width: 36px;
+  height: 36px;
+  font-size: 0;
+  outline-offset: -10px;
+  outline: 2px solid #e27762;
+  background: url("./assets/Plus button.svg") no-repeat center center / 20px;
+  transform: translateX(6px);
+}
+
+.cafe-news h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.news-list {
+  padding: 0;
+  margin: 0;
+}
+
+.news-item:hover {
+  box-shadow: 0px 2px 0px 0px #ccab6899;
+}
+
+.news-item a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+  align-items: center;
+}
+
+.news-item .icon {
+  width: 36px;
+  transform: translateX(6px);
+}
+
+.download-brochure {
+  position: relative;
+  padding: 24px;
+  color: white;
+  background-color: #e27762;
+}
+
+.download-brochure h2 {
+  margin: 0;
+  line-height: 1.125;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.download-brochure a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  background: url("./assets/Up Arrow button.svg") no-repeat center center / 100%;
+  transform: translate(-12px, 10px) rotate(45deg);
+}
+
+.download-brochure img {
+  position: absolute;
+  max-height: 100px;
+  top: 24px;
+  right: 24px;
+  transform: scale(170%);
+}
