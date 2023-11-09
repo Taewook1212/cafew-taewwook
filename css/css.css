@@ -1,0 +1,219 @@
+/* beverages */
+
+/* 기본 박스사이징 설정 */
+body,
+body *,
+body::before,
+body::after,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+/* 속성 초기화 */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  /* body의 기본 폰트는 16px */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a img {
+  vertical-align: middle;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* SEO점수 및 접근성을 고려한 요소 숨김처리법 */
+.a11y-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: polygon(0 0, 0 0, 0 0);
+  clip: rect(0, 0, 0, 0);
+}
+
+.beverages {
+  background: #f3d6b0;
+  padding: 83px 0 119px 123px;
+  position: relative;
+  min-width: 1440px;
+}
+
+.beveragesBrief {
+  width: 402px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #9f7054;
+}
+
+.whiteSpace-of {
+  display: block;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+/* 왼쪽 글자 of의 bar */
+.whiteSpace-of::before {
+  content: '';
+  display: inline-block;
+  width: 160px;
+  border-bottom: 2px solid #9f7054;
+  transform: translateY(-4px);
+}
+
+.whiteSpace-of::after {
+  content: '';
+  display: inline-block;
+  width: 160px;
+  border-bottom: 2px solid #9f7054;
+  transform: translateY(-4px);
+}
+
+.whiteSpace-choux,
+.whiteSpace-cream {
+  display: block;
+  font-weight: 700;
+  font-size: 5.625rem;
+  /* font-size: 90px
+  기본 16px 로 가정 */
+  line-height: 0.9;
+  letter-spacing: 9px;
+  color: #e27762;
+}
+
+.spring-coffee {
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.9;
+}
+
+/* 왼쪽 글자 하단 bar  */
+.beveragesBrief::after {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #9f7054;
+  margin-top: 20px;
+}
+
+.list-strawberryFrappuccin img,
+.list-strawberryFrappuccin figcaption {
+  position: absolute;
+}
+
+.list-chouxCreamLatte img,
+.list-chouxCreamLatte figcaption {
+  position: absolute;
+}
+
+.list-springPeachGreenTea img,
+.list-springPeachGreenTea figcaption {
+  position: absolute;
+}
+
+/* 왼쪽과 위를 기준으로 위치 지정
+위치 때려밖음 ㅡ_ㅡ */
+.list-strawberryFrappuccin img {
+  display: inline-block;
+  width: 283px;
+  left: 33%;
+  top: 173px;
+}
+
+.list-chouxCreamLatte img {
+  display: inline-block;
+  width: 283px;
+  left: 53.4%;
+  top: 120px;
+}
+
+.list-springPeachGreenTea img {
+  display: inline-block;
+  width: 223px;
+  left: 73.05%;
+  top: 302px;
+}
+
+/* 줄바꿈 */
+.whiteSpace {
+  display: block;
+}
+
+.list-chouxCreamLatte span {
+  padding: 12px;
+}
+
+/* 음료의 영어 스타일 */
+.beveragesList figure,
+.list-strawberryFrappuccin .whiteSpace,
+.list-springPeachGreenTea .whiteSpace {
+  color: var(--main-color-deep-oak, #412311);
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+}
+
+/* 음료의 한글 스타일 */
+.beveragesList span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  /* 1.3rem? 16px기준 */
+  color: rgba(95, 76, 76, 0.9);
+  letter-spacing: initial;
+}
+
+/* 글자 위치 때려밖음 left만 적응형 위해 %  */
+.list-strawberryFrappuccin figcaption {
+  top: 520px;
+  left: 32%;
+}
+
+.list-chouxCreamLatte figcaption {
+  top: 100px;
+  left: 51%;
+}
+
+.list-springPeachGreenTea figcaption {
+  top: 220px;
+  left: 75%;
+}
+
+.beveragesMore {
+  display: block;
+  width: 128px;
+  height: 36px;
+  border: 2px solid #e27762;
+  padding: 8px 0;
+  text-align: center;
+  font-family: Spoqa Han Sans Neo;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 137px;
+  color: #e27762;
+}
