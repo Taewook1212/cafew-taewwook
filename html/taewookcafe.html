@@ -7,59 +7,53 @@
     <title>강태욱</title>
   </head>
   <body>
-    <!-- home 왼쪽 글귀  -->
-    <section id="home">
-      <div class="home__container">
-        <section class="home__coffee">
-          <h2 class="home_coffee__title">SPRING IS A CUP</h2>
-          <p class="home__of">of</p>
-          <div class="home__main_box">
-            <h1 class="home__main">
-              CHOUX <br />
-              CREAM
-            </h1>
-          </div>
-          <h3 class="home_discription">봄이 왔다 커피가 설렌다</h3>
-          <div class="bar__bg"></div>
-          <div class="home__button">
-            <div class="home__button__value" title="자세히보기 버튼">
-              자세히 보기
-            </div>
-          </div>
-        </section>
-        <!-- 음료 -->
-        <!-- 1. 딸기 레이어 슈 크림 프라푸치노 -->
-
-        <section class="strawberry">
-          <img
-            src="/image/Image 01.png"
-            alt="STRWBERRY LAYER CHOUX CREAM FRAPPUCCIN"
-          />
-        </section>
-        <div class="strawberry__container">
-          <p class="en_title">STRWBERRY LAYER<br />CHOUX CREAM FRAPPUCCINO</p>
-          <p class="ko__title">딸기 레이어 슈 크림 프라푸치노</p>
-        </div>
-
-        <!-- 2. 슈 크림 라떼 -->
-        <section class="chouxcream">
-          <img src="/image/Image 02.png" alt="CHOUX CREAM LATTE" />
-        </section>
-
-        <div class="chouxcream__container">
-          <p class="en_title">CHOUX CREAM LATTE</p>
-          <p class="ko__title">슈 크림 라떼</p>
-        </div>
-
-        <!-- 3. 스프링 피치 그린 티 -->
-        <section class="greentea">
-          <img src="/image/Image 03.png" alt="SPRING PEACH GREEN TEA" />
-        </section>
-        <div class="greentea__container">
-          <p class="en_title">SPRING <br />PEACH GREEN TEA</p>
-          <p class="ko__title">스프링 피치 그린 티</p>
-        </div>
-      </div>
-    </section>
+    <main id="content">
+      <!-- section1 -->
+      <section class="beverages">
+        <h2 class="beveragesHeading a11y-hidden">추천 음료 및 음료 목록</h2>
+        <p class="beveragesBrief">
+          SPRING IS A CUP
+          <span class="whiteSpace-of">of</span>
+          <span class="whiteSpace-choux">CHOUX</span>
+          <span class="whiteSpace-cream">CREAM</span>
+          <span class="spring-coffee">봄이 왔다 커피가 설렌다</span>
+        </p>
+        <ul class="beveragesList">
+          <li class="list-strawberryFrappuccin">
+            <figure>
+              <img
+                src="../image/image01.png"
+                alt="딸기 레이어 슈 크림 프라푸치노"
+              />
+              <figcaption>
+                STRAWBERRY LAYER
+                <span class="whiteSpace">CHOUX CREAM FRAPPUCCINO</span>
+                <span>딸기 레이어 슈 크림 프라푸치노</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="list-chouxCreamLatte">
+            <figure>
+              <img src="../image/image02.png" alt=" 슈 크림 라떼" />
+              <figcaption>
+                CHOUX CREAM LATTE
+                <span class="whiteSpace">슈 크림 라떼</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="list-springPeachGreenTea">
+            <figure>
+              <img src="../image/image03.png" alt="스프링 피치 그린 티" />
+              <figcaption>
+                SPRING
+                <span class="whiteSpace">PEACH GREEN TEA</span>
+                <span>스프링 피치 그린 티</span>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <a class="beveragesMore" href="#">자세히 보기</a>
+      </section>
+    </main>
   </body>
 </html>
