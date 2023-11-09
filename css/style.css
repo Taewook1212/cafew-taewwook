@@ -63,17 +63,24 @@ button {
 /* ------------------Home ---------------------- */
 
 #taewook {
-  background-color: var(--color-Backgorund);
+  background-image: url(../image/Hero\ Beverages.svg);
+}
+
+.container {
   position: relative;
   display: flex;
+  justify-content: center;
+  min-width: var(--size-max-height);
+  min-height: var(--size-max-height);
 }
 
 .banner {
+  margin: auto 0;
 }
 
 .banner__coffee {
   width: 402px;
-  height: var(--size-max-height);
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +106,7 @@ button {
 .banner__of::after {
   content: '';
   border-bottom: 2px solid var(--color-PaleBrown);
-  width: 160px;
+  width: 145px;
 }
 .banner__of::before {
   transform: translate(-20px, -42%);
@@ -142,68 +149,4 @@ button {
 
 /* -----------------------음료 3종류-------------------------  */
 
-.drink__container {
-  position: absolute;
-  width: 60%;
-  height: 100%;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-}
-
-.drink__wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.drink__wrapper.left {
-  transform: translateX(-40%);
-}
-.drink__wrapper.center {
-  transform: translateX(-20%);
-}
-.drink__wrapper.right {
-  transform: translateX(10%);
-}
-
-.drink__wrapper img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 250px;
-  aspect-ratio: 5/5;
-  object-fit: cover;
-  object-position: -100px center;
-  transform: translateX(-50%);
-}
-
-.drink__wrapper:nth-child(2) img {
-  object-position: -62.5px center;
-  /* 네 */
-}
-
-.drink__wrapper:nth-child(3) img {
-  width: 184px;
-}
-
-.en_title {
-  color: var(--color-DeepOak);
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 2.8px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 /* ------------------음료 한글 타이틀 ---------------------*/
-
-.ko__title {
-  /* 공간이 큼 */
-  color: var(--color-DonJuan);
-  font-size: 21px;
-  font-weight: 400;
-  text-align: center;
-}
