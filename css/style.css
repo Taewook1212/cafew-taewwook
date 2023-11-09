@@ -24,8 +24,22 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
+}
+
+/* 숨김 콘텐츠 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 h1,
@@ -48,18 +62,17 @@ button {
 
 /* ------------------Home ---------------------- */
 
-/* 가로스크롤이 생기는이유? 
-.home {
-  display: inline;
-} */
-
 #taewook {
-  position: relative;
   background-color: var(--color-Backgorund);
+  position: relative;
+  display: flex;
 }
+
+.banner {
+}
+
 .banner__coffee {
   width: 402px;
-  position: relative;
   height: var(--size-max-height);
   display: flex;
   flex-direction: column;
@@ -82,10 +95,9 @@ button {
   letter-spacing: 4px;
 }
 
-/* backround-iamge로 할껄.. */
 .banner__of::before,
 .banner__of::after {
-  content: "";
+  content: '';
   border-bottom: 2px solid var(--color-PaleBrown);
   width: 160px;
 }
@@ -119,8 +131,6 @@ button {
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  /* inline-flex 없어도 작동됨. 
-    inline-block과 똑같이 보면 된다.*/
 }
 
 .banner__button:hover {
@@ -134,84 +144,58 @@ button {
 
 .drink__container {
   position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
+  width: 60%;
+  height: 100%;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
 }
 
 .drink__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
-/* -------------------------음료 이미지--------------------- */
-.strawberry {
+.drink__wrapper.left {
+  transform: translateX(-40%);
+}
+.drink__wrapper.center {
+  transform: translateX(-20%);
+}
+.drink__wrapper.right {
+  transform: translateX(10%);
+}
+
+.drink__wrapper img {
   position: absolute;
-  margin: 113px 676px 59px 481px;
-  cursor: default;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  aspect-ratio: 5/5;
+  object-fit: cover;
+  object-position: -100px center;
+  transform: translateX(-50%);
 }
 
-.chouxcream {
-  position: absolute;
-  margin: 62px 388px 110px 769px;
-  cursor: default;
+.drink__wrapper:nth-child(2) img {
+  object-position: -62.5px center;
+  /* 네 */
 }
 
-.greentea {
-  position: absolute;
-  margin: 242px 165px 3px 1052px;
-  cursor: default;
+.drink__wrapper:nth-child(3) img {
+  width: 184px;
 }
-
-/* -------------------------음료 타이틀 컨테이너-------------------- */
-
-.strawberry__container {
-  position: absolute;
-  margin: 473px 493px 36px 476px;
-  display: flex;
-  width: 478px;
-  /* 피그마 수치 -> width:471px */
-  height: 91px;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.chouxcream__container {
-  position: absolute;
-  margin: 68px 300px 472px 699px;
-  display: flex;
-  flex-direction: column;
-  width: 450px;
-  /*  피그마 수치 -> width:441px */
-  height: 60px;
-  padding: 0px 52px 0px 51px;
-  gap: 12px;
-}
-
-.greentea__container {
-  position: absolute;
-  margin: 188px -30px 321px 999px;
-  display: flex;
-  flex-direction: column;
-  letter-spacing: 2.8px;
-  width: 474px;
-  /*  피그마 수치 -> width:471px */
-  height: 91px;
-  padding: 0px 89px;
-  gap: 15px;
-}
-
-/* -------------음료 영문 타이틀 -------------------*/
 
 .en_title {
   color: var(--color-DeepOak);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: 2.8px;
   text-align: center;
+  white-space: nowrap;
 }
 
 /* ------------------음료 한글 타이틀 ---------------------*/

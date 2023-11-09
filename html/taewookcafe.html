@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,43 +9,49 @@
   <body>
     <!-- home 왼쪽 글귀  -->
     <section id="taewook">
-      <h2 class="sr-only">신메뉴 베너</h2>
-      <div class="banner__coffee">
-        <h3 class="banner__subtitle">SPRING IS A CUP</h3>
-        <p class="banner__of">of</p>
-        <h1 class="banner__title">
-          CHOUX <br />
-          CREAM
-        </h1>
-        <h3 class="banner__discription">봄이 왔다 커피가 설렌다</h3>
-        <div class="bar__bg"></div>
-        <a class="banner__button" href="#">자세히 보기</a>
+      <div class="banner">
+        <h2 class="sr-only">신메뉴 베너</h2>
+        <div class="banner__coffee">
+          <h3 class="banner__subtitle">SPRING IS A CUP</h3>
+          <p class="banner__of">of</p>
+          <h1 class="banner__title">
+            CHOUX <br />
+            CREAM
+          </h1>
+          <h3 class="banner__discription">봄이 왔다 커피가 설렌다</h3>
+          <div class="bar__bg"></div>
+          <a class="banner__button" href="#">자세히 보기</a>
+        </div>
+        <!-- 음료 -->
       </div>
-      <!-- 음료 -->
       <!-- 1. 딸기 레이어 슈 크림 프라푸치노 -->
       <div class="drink__container">
-        <div class="drink__wrapper">
+        <figure class="drink__wrapper left">
           <img
             src="/image/Image 01.png"
             alt="STRWBERRY LAYER CHOUX CREAM FRAPPUCCIN"
           />
-          <p class="en_title">STRWBERRY LAYER<br />CHOUX CREAM FRAPPUCCINO</p>
-          <p class="ko__title">딸기 레이어 슈 크림 프라푸치노</p>
-        </div>
-
+          <figcaption>
+            <p class="en_title">STRWBERRY LAYER<br />CHOUX CREAM FRAPPUCCINO</p>
+            <p class="ko__title">딸기 레이어 슈 크림 프라푸치노</p>
+          </figcaption>
+        </figure>
         <!-- 2. 슈 크림 라떼 -->
-        <div class="drink__wrapper">
+        <figure class="drink__wrapper center">
           <img src="/image/Image 02.png" alt="CHOUX CREAM LATTE" />
-          <p class="en_title">CHOUX CREAM LATTE</p>
-          <p class="ko__title">슈 크림 라떼</p>
-        </div>
-
+          <figcaption>
+            <p class="en_title">CHOUX CREAM LATTE</p>
+            <p class="ko__title">슈 크림 라떼</p>
+          </figcaption>
+        </figure>
         <!-- 3. 스프링 피치 그린 티 -->
-        <div class="drink__wrapper">
+        <figure class="drink__wrapper right">
           <img src="/image/Image 03.png" alt="SPRING PEACH GREEN TEA" />
-          <p class="en_title">SPRING <br />PEACH GREEN TEA</p>
-          <p class="ko__title">스프링 피치 그린 티</p>
-        </div>
+          <figcaption>
+            <p class="en_title">SPRING <br />PEACH GREEN TEA</p>
+            <p class="ko__title">스프링 피치 그린 티</p>
+          </figcaption>
+        </figure>
       </div>
     </section>
   </body>
