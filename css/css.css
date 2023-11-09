@@ -119,6 +119,8 @@ li {
   margin-top: 20px;
 }
 
+/*  음료 부분 */
+
 .list-strawberryFrappuccin img,
 .list-strawberryFrappuccin figcaption {
   position: absolute;
@@ -134,8 +136,7 @@ li {
   position: absolute;
 }
 
-/* 왼쪽과 위를 기준으로 위치 지정
-위치 때려밖음 ㅡ_ㅡ */
+/* 커피 이미지 왼쪽과 위를 기준으로 위치 지정  위치 때려밖음 ㅡ_ㅡ */
 .list-strawberryFrappuccin img {
   display: inline-block;
   width: 283px;
@@ -157,19 +158,12 @@ li {
   top: 302px;
 }
 
-/* 줄바꿈 */
-.whiteSpace {
-  display: block;
-}
-
 .list-chouxCreamLatte span {
   padding: 12px;
 }
 
 /* 음료의 영어 스타일 */
-.beveragesList figure,
-.list-strawberryFrappuccin .whiteSpace,
-.list-springPeachGreenTea .whiteSpace {
+.beveragesList figure {
   color: var(--main-color-deep-oak, #412311);
   text-align: center;
   font-size: 28px;
@@ -187,7 +181,7 @@ li {
   letter-spacing: initial;
 }
 
-/* 글자 위치 때려밖음 left만 적응형 위해 %  */
+/* (한글,영어)글자 위치 때려밖음 left만 적응형 위해 %사용  */
 .list-strawberryFrappuccin figcaption {
   top: 520px;
   left: 32%;
