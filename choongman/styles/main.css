@@ -1,0 +1,101 @@
+@import "./common.css";
+@import "./normalize.css";
+
+:root {
+  --base-bg: #fffcf9;
+  --base-font: #7d6f5d;
+}
+.choongman {
+  margin: 0 auto;
+  max-width: 1340px;
+}
+
+/* blended */
+.blended {
+  height: 540px;
+  background-image: url(../assets/hero-medal-bg.svg);
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.blended-inner {
+  position: relative;
+  height: inherit;
+  margin: 0 auto;
+}
+
+.medal {
+  width: 300px;
+  height: 300px;
+  perspective: 600px;
+}
+
+.medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+.medal:hover .back {
+  transform: rotateY(0deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  backface-visibility: hidden;
+  transition: all 0.8s;
+}
+
+.front {
+  background-image: url(../assets/ellipse.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateY(0deg);
+}
+
+.back {
+  flex-direction: column;
+  background-image: url(../assets/medal-back.svg);
+  background-size: cover;
+  color: var(--base-font);
+  transform: rotateY(-180deg);
+}
+
+.back h2 {
+  margin: 0;
+  margin-top: 20px;
+}
+
+.back p {
+  margin: 0;
+  margin-top: 20px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.view-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: transparent;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--base-font);
+  border: 2px solid var(--base-font);
+  border-radius: 3px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  color: var(--base-bg);
+  border: 2px solid var(--base-font);
+  background: var(--base-font);
+}
+
+/* store */
+.store {
+  height: 420px;
+  background-image: url(../assets/hero-store-bg.svg);
+}
