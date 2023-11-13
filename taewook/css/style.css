@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
 }
 
@@ -37,7 +37,7 @@ div,
 section {
   margin: 0;
   padding: 0;
-  font-size: 0px;
+  /* font-size: 0px; */
 }
 
 button {
@@ -53,192 +53,146 @@ button {
   display: inline;
 } */
 
-.home__container {
-  /* 부모 */
+#taewook {
   position: relative;
-  width: var(--size-max-width);
-  height: var(--size-max-height);
-  /*   min-width: var(--size-max-width);
-  min-height: var(--size-max-height); */
   background-color: var(--color-Backgorund);
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  /* justify-content: center; */
 }
-
-.home__coffee {
-  position: absolute;
-  top: 83px;
-  left: 119px;
-  /* margin: 83px 919px 120px 119px; */
-  min-width: 402px;
-  min-height: 397px;
+.banner__coffee {
+  width: 402px;
+  position: relative;
+  height: var(--size-max-height);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.1em;
+  color: var(--color-main-text);
 }
 
-.home_coffee__title {
-  color: var(--color-main-text);
-  text-align: center;
+.banner__subtitle {
   font-size: 40px;
   font-weight: 400;
   letter-spacing: 4px;
 }
 
-.home__of {
-  color: var(--color-main-text);
+.banner__of {
   font-size: 40px;
   display: flex;
-  justify-content: center;
-
-  text-align: center;
-  font-family: Spoqa Han Sans Neo;
-  font-size: 40px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: 4px;
 }
 
 /* backround-iamge로 할껄.. */
-.home__of:before,
-.home__of:after {
-  content: '';
-  display: block;
-  position: relative;
-  top: 23px;
-  margin: 0.5rem 0;
+.banner__of::before,
+.banner__of::after {
+  content: "";
+  border-bottom: 2px solid var(--color-PaleBrown);
   width: 160px;
-  height: 2px;
-  background-color: var(--color-PaleBrown);
 }
-.home__of:before {
-  /* transform: translateX(-15%); */
-  margin-right: 15px;
+.banner__of::before {
+  transform: translate(-20px, -42%);
 }
-.home__of:after {
-  /* transform: translateX(15%); */
-  margin-left: 15px;
+.banner__of::after {
+  transform: translate(20px, -42%);
 }
 
-.home__main_box {
-  width: 400px;
-  height: 162px;
-}
-.home__main {
+.banner__title {
   color: var(--color-TerraCotta);
   font-size: 90px;
-  font-weight: 700;
-  line-height: 90%;
+  line-height: 1;
   letter-spacing: 9px;
-  text-align: center;
 }
 
 .bar__bg {
   margin-top: 13px;
   margin-bottom: 20px;
   width: 100%;
-  height: 2px;
-  background-color: var(--color-PaleBrown);
+  border-bottom: 2px solid var(--color-PaleBrown);
 }
 
-.home_discription {
-  color: var(--color-PaleBrown);
-  font-size: 26px;
-  text-align: center;
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-.home__button {
+.banner__button {
   color: var(--color-TerraCotta);
   border: 2px solid var(--color-TerraCotta);
   border-radius: 3px;
   padding: 10px 25px;
-  display: inline-flex;
   margin: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
   /* inline-flex 없어도 작동됨. 
     inline-block과 똑같이 보면 된다.*/
 }
 
-.home__button__value {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.home__button:hover {
+.banner__button:hover {
   background-color: transparent;
-  outline: 2px solid var(--color-DeepOak);
+  border: 2px solid var(--color-DeepOak);
   color: var(--color-DeepOak);
   cursor: pointer;
 }
 
 /* -----------------------음료 3종류-------------------------  */
 
-/* -------------------------음료 이미지--------------------- */
-.strawberry,
-.chouxcream,
-.greentea,
-.strawberry__container,
-.chouxcream__container,
-.greentea__container {
+.drink__container {
   position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
 }
+
+.drink__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------음료 이미지--------------------- */
 .strawberry {
-  /* margin: 113px 676px 59px 481px; */
-  top: 113px;
-  left: 481px;
+  position: absolute;
+  margin: 113px 676px 59px 481px;
+  cursor: default;
 }
 
 .chouxcream {
-  /* margin: 62px 388px 110px 769px; */
-  top: 62px;
-  right: 388px;
+  position: absolute;
+  margin: 62px 388px 110px 769px;
+  cursor: default;
 }
 
 .greentea {
-  bottom: 0;
-  right: 165px;
-  /* margin: 242px 165px 3px 1052px; */
+  position: absolute;
+  margin: 242px 165px 3px 1052px;
+  cursor: default;
 }
 
 /* -------------------------음료 타이틀 컨테이너-------------------- */
+
 .strawberry__container {
-  bottom: -30px;
-  left: 0;
-
-  /* margin: 473px 493px 36px 476px; */
-
+  position: absolute;
+  margin: 473px 493px 36px 476px;
   display: flex;
   width: 478px;
   /* 피그마 수치 -> width:471px */
-  /* height: 91px; */
+  height: 91px;
   flex-direction: column;
   gap: 15px;
 }
 
 .chouxcream__container {
-  /* margin: 68px 300px 472px 699px; */
-  top: 0;
-  left: -70px;
-
+  position: absolute;
+  margin: 68px 300px 472px 699px;
   display: flex;
   flex-direction: column;
   width: 450px;
   /*  피그마 수치 -> width:441px */
   height: 60px;
-  /* padding: 0px 52px 0px 51px; */
+  padding: 0px 52px 0px 51px;
   gap: 12px;
 }
 
 .greentea__container {
-  top: -54px;
-  left: -53px;
-  /* margin: 188px -30px 321px 999px; */
+  position: absolute;
+  margin: 188px -30px 321px 999px;
   display: flex;
   flex-direction: column;
   letter-spacing: 2.8px;
